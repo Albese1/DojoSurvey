@@ -1,0 +1,38 @@
+<html>
+ <head>
+ <title>My CodingDojo Form</title>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ </head>
+ <body>
+<div class="container">
+ <form method='POST' action='/result'>
+
+ {% csrf_token %}
+     <div class="row">
+         <div class="col-6 p-3 my-3">
+            <label>Your name</label>
+         </div>
+             <div class="col-6 p-3 my-3">
+             <input class="form-control" type='text' name='fullName' placeholder="john smith">
+         </div>
+         <div class="col-6 p-3 my-3"> <label>Dojo location</label></div>
+         <div class="col-6 p-3 my-3"><select name='dojoLocation'>
+ <option value='pristina'>Pristina</option>
+ <option value='tirana'>Tirana</option>
+ <option value='sanJose'>San Jose</option>
+ </select></div>
+         <div class="col-6 p-3 my-3"> <label>Favorite Language</label></div>
+         <div class="col-6 p-3 my-3"> <select name='favoriteLanguage'>
+ <option value='python'>Python</option>
+ <option value='php'>PHP</option>
+ <option value='cplusplus'>C++</option>
+ </select></div>
+         <div class="col-12 p-3 my-3">
+             <textarea name="comment" class="w-100" rows="6" placeholder="Your comment here"></textarea>
+         </div>
+         <input type='submit' class="btn btn-block btn-primary" value='Send data'>
+     </div>
+ </form>
+    </div>
+ </body>
+ </html>
